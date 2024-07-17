@@ -1,18 +1,21 @@
-import { useState } from 'react'
-import Button from '@mui/material/Button'
+import AdorerTable from './components/AdorerTable'
+import PrimarySearchAppBar from './components/PrimarySearchAppBar';
+import Typography from '@mui/material/Typography'
 import './App.css'
 
 function App() {
 
   return (
     <>
-      <h1>Ado Coordinator</h1>
-      <div className="card">
-        <Button variant="contained">Hello world</Button>
-        <p>
-          Hi
-        </p>
-      </div>
+      <PrimarySearchAppBar />
+      <main>
+        <Typography variant="h2" gutterBottom>
+          Adorers this Week
+        </Typography>
+        <div className="card">
+          <AdorerTable />
+        </div>
+      </main>
     </>
   )
 }
